@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header img {
+  height: 30px;
+  width: 60px;
+  padding-left: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  flex-wrap: wrap;
+  margin: -5px;
+  padding-right: 20px;
+}
+
+header nav ul li {
+  margin: 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+header nav ul li a:hover {
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; /* Remove padding from main */
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+}
+
+.banner {
+  text-align: center;
+  color: #20521a;
+  width: 100%; /* Make banner full-width */
+  height: 100%; /* Make banner full-height */
+  display: flex; /* Use flexbox to control image positioning */
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.banner img {
+  /* display: none; */ /* remove this line */
+  width: 100%; /* Make image occupy full width of banner */
+  height: 100%; /* Make image occupy full height of banner */
+  object-fit: contain; /* Or use 'cover' depending on desired effect */
+}
+
+.social-icons {
+  position: relative;
+  left: auto;
+  top: 10px;
+  transform: translateY(0);
+  width: 100%;
+  text-align: center;
+}
+
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.social-icons ul li {
+  margin: 0 10px;
+}
+
+.social-icons ul li a img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  .social-icons ul {
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    top: 550px;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.companyname {
+  font-weight: bold;
+  font-size: 3.5rem;
+  text-align: left;
+}
+
+.about-video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 87%;
+  z-index: -1; /* Video in the background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* ... other styles for .about-video ... */
+}
+
+.about-video img {
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
+}
+.about-video-text {
+  position: absolute; /* Position text absolutely */
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  /* Optional: Background for text */
+  color: #040e39;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1; /* Ensure text is above the image */
+  text-align: center;
+  font-size: 4.2em;
+}
+
+footer {
+  background-color: #bbb5b5;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20; /* Ensure footer is above the video */
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+  header {
+    font-style: italic;
+    background-color: rgba(199, 201, 232, 0.3);
+    color: #0e0e0e;
+    font-size: 4vw;
+    margin-bottom: 1rem;
+    z-index: 10; /* Keep tagline above the video */
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 5px;
+  }
+  .animate-left-button {
+    border-radius: 0%;
+    clip-path: polygon(
+      0% 20%,
+      60% 20%,
+      60% 0%,
+      100% 50%,
+      60% 100%,
+      60% 80%,
+      0% 80%
+    );
+    text-align: center;
+    height: 50px;
+    width: auto;
+    padding: 10px;
+  }
+  .animate-left-button:hover {
+    height: 70px;
+    width: 70px;
+  }
+  .companyname {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .tagline {
+    font-size: 8vw;
+    margin-top: 20vh;
+    padding: 10px 20px;
+  }
+}
+
+/* Further adjustments for even smaller screens */
+@media (max-width: 480px) {
+  header {
+    z-index: 30; /* Ensure header stays above the video on very small screens */
+  }
+
+  .tagline {
+    font-size: 10vw;
+  }
+}

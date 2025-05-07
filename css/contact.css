@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/* Base styles */
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.contact-info {
+  width: 100%;
+}
+.contact-info-item {
+  display: flex;
+  flex-direction: column; /* Stack icon and
+text */
+  align-items: center; /* Center items */
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contact-info-icon {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+.contact-info-content h4 {
+  color: #1da9c0;
+  font-size: 1.1em;
+  margin-bottom: 3px;
+}
+.contact-info-content p {
+  color: #110533;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+.contact-form {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+}
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1em;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  resize: none;
+}
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1em;
+  margin: 8px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span {
+  color: #e91e63;
+  font-size: 0.8em;
+  transform: translateY(-12px);
+}
+.contact-form .input-box input[type="submit"] {
+  width: 100%;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 1.1em;
+  border: 1px solid #00bcd4;
+  transition: 0.3s ease;
+  margin-top: 15px;
+}
+.contact-form .input-box input[type="submit"]:hover {
+  background: #fff;
+  color: #00bcd4;
+} /*
+Media Query for larger screens (min-width: 768px) */
+@media (min-width: 768px) {
+  section {
+    padding: 50px 20px;
+  }
+  .section-header {
+    margin-bottom: 40px;
+  }
+  .section-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  .row {
+    flex-direction: row; /* Switch to row on larger screens */
+    gap: 30px;
+    align-items: flex-start;
+  }
+  .about-us {
+    width: 25%; /* Adjust width */
+    order: 0;
+    /* Back to normal order */
+    flex-direction: column; /* Stack buttons on larger
+screens */
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally within the container */
+    z-index: 20; /* Ensure buttons are above the video */
+  }
+
+  .animate-left-button {
+    position: relative;
+    height: 65px;
+    width: 60px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 21;
+    animation: slideLeft 0.5s ease-in-out forwards;
+    margin-bottom: 10px;
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    line-height: 60px;
+  }
+  .animate-left-button:hover {
+    height: 70px; /* Slightly larger on hover */
+    width: 70px;
+    border-radius: 50%;
+    background-color: #5a28eb; /* Slightly darker hover color */
+    color: #e0eba8f5;
+    transition: transform 0.2s ease-in-out; /* Smooth hover transition */
+    transform: scale(1.05); /* Slight scale on hover */
+    line-height: 70px; /* Adjust line-height on hover */
+  }
+
+  .contact-info {
+    width: 35%; /* Adjust width */
+  }
+  .contact-info-item {
+    flex-direction: row; /* Back to
+row for icon and text */
+    align-items: center;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  .contact-info-icon {
+    margin-right: 15px;
+    margin-bottom: 0;
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+    line-height: 50px;
+  }
+  .contact-form {
+    width: 40%;
+    /* Adjust width */
+    padding: 30px;
+  }
+  .contact-form h2 {
+    text-align: left;
+  }
+} /*
+Animation for left buttons on larger screens */
+@keyframes slideLeft {
+  0% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 5%;
+    transform: translateX(0);
+  }
+}
+/* Base styles for the WhatsApp link */
+.contact-form a {
+  position: absolute;
+  /* Adjust these values to place it where you initially want it for smaller/default screens */
+  top: 10px;
+  right: 10px;
+  z-index: 10; /* Ensure it's above the form if needed */
+}
+
+.contact-form a img {
+  height: 50px;
+  width: 50px;
+}
+
+/* Media query for larger screens (e.g., desktops) */
+@media (min-width: 769px) {
+  .contact-form a {
+    /* Adjust the top value to move it above */
+    top: -60px; /* Negative value to move it up (adjust as needed based on image height and desired spacing) */
+    /* Keep the right value to stick it to the right corner */
+    right: 10px;
+  }
+
+  .contact-form a img {
+    /* You might want to adjust the size for larger screens if needed */
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* You might also need to adjust for very large screens with another media query */
+@media (min-width: 1200px) {
+  .contact-form a {
+    right: 10px; /* Adjust spacing for wider layouts */
+    top: 170px;
+  }
+
+  .contact-form a img {
+    height: 70px;
+    width: 70px;
+  }
+}
