@@ -41,13 +41,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: white;
+  color: rgb(13, 13, 13);
   text-decoration: none;
   font-size: 14px;
 }
 
 header nav ul li a:hover {
-  color: #fff;
+  color: #26b310;
 }
 
 main {
